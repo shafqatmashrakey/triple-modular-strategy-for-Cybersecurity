@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Embedded PowerPoint Presentation with Video</title>
+   <style>
+       .container {
+           display: flex;
+           flex-direction: column;
+           align-items: center;
+           text-align: center;
+           padding: 20px;
+           color: #007bff;
+           background-color: #e0eaf0;
+       }
+       .title {
+           font-size: 24px;
+           font-weight: bold;
+           margin-bottom: 10px;
+       }
+       .description {
+           font-size: 16px;
+           color: #666;
+           margin-bottom: 20px;
+       }
+       .pdf-container {
+           width: 80%;
+           max-width: 800px;
+           height: 600px;
+           margin-bottom: 20px;
+       }
+       .video-container {
+           width: 80%;
+           max-width: 800px;
+       }
+   </style>
+</head>
+<body>
+   <div class="container">
+       <!-- Title Page -->
+       <div class="title">Welcome to My Embedded PowerPoint Presentation with Video</div>
+       <div class="description">
+           <h2>
+               As cybersecurity threats continue to rise, a major contributing factor is poor passwords among regular internet users including weak, reused, and compromised passwords which can lead to harmful data breaches. Poor password practices like weak and reused passwords are a major cause of cybersecurity vulnerabilities and data breaches. The research question is: can a fun, game-like web application help promote better password habits among internet users? This study will develop password checking web apps using gameplay elements to see if making security education interactive improves the adoption of strong, unique passwords.
+           </h2>
+           <h1><b>The Triple Modular Strategy:</b></h1>
+           <h2>
+               <b>Implementation 1: </b>
+
+                <li>
+                    Front-end: HTML, CSS, and Vanilla JavaScript 
+                </li>
+                <br>
+               <b>Implementation 2:</b>
+               <li>
+                    Front-end: HTML, CSS, and React.js
+               </li> 
+               <li>
+                    Back-end: Node.js with Express.js framework
+               </li><br>
+               <b>Implementation 3:</b> <li>Front-end: HTML, CSS, and php</li>
+               <li>Back-end: composer.json,PHPmailer and SMTP Server,Svelte </li>
+           </h2>
+           <a href="project1/index.html">Implementation 1</a>
+           <a href="project2/password-strength-game/public/index.html">Implementation 2</a>
+           <a href="project3/form.html">Implementation 3</a>
+           <h1><b>Tutorial for the Implementations</b></h1>
+           <!-- Video Player -->
+           <video controls class="video-container">
+               <source src="tutorial.mp4" type="video/mp4">
+           </video>
+           <br><br><br>
+           <a href="csc543.html">CSC 543 Peer Review</a><br>
+           <a href="csc543reviewfeedback.html">CSC 543 Peer Review Feedback</a>
+       </div>
+       <br><br><br>
+
+       <!-- Embedded PowerPoint Presentation -->
+       <h1><b>Presentation Slide</b></h1>
+       <iframe src="Presentation.pdf" class="pdf-container" frameborder="flex"></iframe>
+       <br><br><br><br>
+
+       <h1><b>Embedded Video</b></h1>
+       <!-- Video Player -->
+       <video controls class="video-container">
+           <source src="Presentation.pptx - Personal - Microsoft​ Edge 2024-03-01 22-20-55.mp4" type="video/mp4">
+       </video>
+   </div>
+   <script>
+       const video = document.querySelector('.video-container');
+       window.addEventListener('scroll', () => {
+           const videoPosition = video.getBoundingClientRect().top;
+           const windowHeight = window.innerHeight;
+           if (videoPosition < 0 || videoPosition > windowHeight) {
+               video.pause();
+           }
+       });
+   </script>
+</body>
+</html>

@@ -1,0 +1,477 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+<html>
+  <head>
+      <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+      <meta name="generator" content="PhpSpreadsheet, https://github.com/PHPOffice/PhpSpreadsheet">
+      <meta name="author" content="Barello, Philip M." />
+    <style type="text/css">
+      html { font-family:Calibri, Arial, Helvetica, sans-serif; font-size:11pt; background-color:white }
+      a.comment-indicator:hover + div.comment { background:#ffd; position:absolute; display:block; border:1px solid black; padding:0.5em }
+      a.comment-indicator { background:red; display:inline-block; border:1px solid black; width:0.5em; height:0.5em }
+      div.comment { display:none }
+      table { border-collapse:collapse; page-break-after:always }
+      .gridlines td { border:1px dotted black }
+      .gridlines th { border:1px dotted black }
+      .b { text-align:center }
+      .e { text-align:center }
+      .f { text-align:right }
+      .inlineStr { text-align:left }
+      .n { text-align:right }
+      .s { text-align:left }
+      td.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      th.style0 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      td.style1 { vertical-align:top; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FFFFFF; font-family:'Calibri'; font-size:12pt; background-color:#4472C4 }
+      th.style1 { vertical-align:top; text-align:center; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#FFFFFF; font-family:'Calibri'; font-size:12pt; background-color:#4472C4 }
+      td.style2 { vertical-align:top; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      th.style2 { vertical-align:top; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      td.style3 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      th.style3 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      td.style4 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      th.style4 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      td.style5 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:white }
+      th.style5 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:white }
+      td.style6 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:#FFFFFF }
+      th.style6 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Arial'; font-size:10pt; background-color:#FFFFFF }
+      td.style7 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+      th.style7 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Times New Roman'; font-size:12pt; background-color:white }
+      td.style8 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#29261B; font-family:'__Tiempos_B6F14E'; font-size:13.5pt; background-color:white }
+      th.style8 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#29261B; font-family:'__Tiempos_B6F14E'; font-size:13.5pt; background-color:white }
+      td.style9 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      th.style9 { vertical-align:bottom; border-bottom:none #000000; border-top:none #000000; border-left:none #000000; border-right:none #000000; color:#000000; font-family:'Calibri'; font-size:12pt; background-color:white }
+      table.sheet0 col.col0 { width:119.28888752pt }
+      table.sheet0 col.col1 { width:153.17777602pt }
+      table.sheet0 col.col2 { width:153.17777602pt }
+      table.sheet0 col.col3 { width:196.5555533pt }
+      table.sheet0 col.col4 { width:103.69999881pt }
+      table.sheet0 col.col5 { width:134.87777623pt }
+      table.sheet0 col.col6 { width:664.2222146pt }
+      table.sheet0 col.col7 { width:134.87777623pt }
+      table.sheet0 col.col8 { width:119.28888752pt }
+      table.sheet0 col.col9 { width:42pt }
+      table.sheet0 col.col10 { width:42pt }
+      table.sheet0 col.col11 { width:58.96666599pt }
+      table.sheet0 col.col12 { width:56.25555491pt }
+      table.sheet0 col.col13 { width:79.29999909pt }
+      table.sheet0 col.col14 { width:67.777777pt }
+      table.sheet0 col.col15 { width:42pt }
+      table.sheet0 col.col16 { width:42pt }
+      table.sheet0 tr { height:16.363636363636pt }
+      table.sheet0 tr.row0 { height:32.25pt }
+      table.sheet0 tr.row1 { height:129pt }
+      table.sheet0 tr.row2 { height:64.5pt }
+      table.sheet0 tr.row3 { height:113.25pt }
+      table.sheet0 tr.row4 { height:48.75pt }
+      table.sheet0 tr.row5 { height:64.5pt }
+      table.sheet0 tr.row6 { height:96.75pt }
+      table.sheet0 tr.row7 { height:96.75pt }
+      table.sheet0 tr.row8 { height:96.75pt }
+      table.sheet0 tr.row9 { height:96.75pt }
+      table.sheet0 tr.row10 { height:64.5pt }
+      table.sheet0 tr.row11 { height:81pt }
+      table.sheet0 tr.row12 { height:64.5pt }
+      table.sheet0 tr.row13 { height:48.75pt }
+      table.sheet0 tr.row14 { height:48.75pt }
+      table.sheet0 tr.row15 { height:64.5pt }
+      table.sheet0 tr.row16 { height:81pt }
+    </style>
+  </head>
+
+  <body>
+<style>
+@page { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+body { margin-left: 0.7in; margin-right: 0.7in; margin-top: 0.75in; margin-bottom: 0.75in; }
+</style>
+    <table border="0" cellpadding="0" cellspacing="0" id="sheet0" class="sheet0 gridlines">
+        <col class="col0">
+        <col class="col1">
+        <col class="col2">
+        <col class="col3">
+        <col class="col4">
+        <col class="col5">
+        <col class="col6">
+        <col class="col7">
+        <col class="col8">
+        <col class="col9">
+        <col class="col10">
+        <col class="col11">
+        <col class="col12">
+        <col class="col13">
+        <col class="col14">
+        <col class="col15">
+        <col class="col16">
+        <tbody>
+          <tr class="row0">
+            <td class="column0 style1 s">Author </td>
+            <td class="column1 style1 s">Summary and comments about triple-modular strategy</td>
+            <td class="column2 style1 s">Project strengths</td>
+            <td class="column3 style1 s">Opportunities for improvement</td>
+            <td class="column4 style1 s">Questions for author</td>
+            <td class="column5 style1 s">Suggestions for author</td>
+            <td class="column6 style1 s">Author's response</td>
+            <td class="column7 style1 s">Date of the response</td>
+            <td class="column8">&nbsp;</td>
+            <td class="column9">&nbsp;</td>
+            <td class="column10">&nbsp;</td>
+            <td class="column11">&nbsp;</td>
+            <td class="column12">&nbsp;</td>
+            <td class="column13">&nbsp;</td>
+            <td class="column14">&nbsp;</td>
+            <td class="column15">&nbsp;</td>
+            <td class="column16">&nbsp;</td>
+          </tr>
+          <tr class="row1">
+            <td class="column0 style5 s">Peter Chukwu</td>
+            <td class="column1 style3 s">The research project aims to address the issue of poor password habits among internet users by developing engaging, game-like password checking web applications.</td>
+            <td class="column2 style3 s">The project has a clear goal of improving password habits, which is a crucial aspect of personal and organizational security.</td>
+            <td class="column3 style3 s">Consider ways to maximize user engagement with the game-like password checkers to ensure sustained use and habit change.</td>
+            <td class="column4 style3 s">How will you ensure that the game-like elements are effective in teaching good password practices without compromising the fun aspect of the app?</td>
+            <td class="column5 style3 s">Incorporate a feedback mechanism within the app to gather user insights and suggestions for further improvement.</td>
+            <td class="column6 style3 s">Based on my research it has been proven that human can memorize and put more effort if they learn through fun game and I will try to put up a working contact page through SMTP server to get the feedback to get user insights</td>
+            <td class="column7 style9 n">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row2">
+            <td class="column0 style3 s">Paulo Muniz</td>
+            <td class="column1 style3 s">Engaging web applications designed to promote secure password habits through interactive learning.</td>
+            <td class="column2 style3 s">Utilizes engaging methods to tackle cyber security education.</td>
+            <td class="column3 style3 s">Implement user testing for engagement and educational efficacy.</td>
+            <td class="column4 style3 s">How will the app's impact on password practices be measured?</td>
+            <td class="column5 style3 s">Consider a built-in feature for generating strong passwords.</td>
+            <td class="column6 style3 s">By using a gamified environment, users are motivated to create stronger, unique passwords instead of generic ones.</td>
+            <td class="column7 style9 n">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row3">
+            <td class="column0 style3 s">Oluwakemi Famuagun</td>
+            <td class="column1 style3 s">The author plans to develop fun, game-like web applications using HTML, CSS, JavaScript, Node.js, and PHP to improve internet users' password habits through interactive security education.</td>
+            <td class="column2 style3 s">The strength of this project is its approach to addressing cybersecurity threats by using engaging, game-like web applications to promote better password habits among internet users.</td>
+            <td class="column3 style3 s">For improvement you could conduct user testing to ensure that the game-like web applications effectively engage and educate users, leading to the adoption of stronger</td>
+            <td class="column4 style3 s">How do you plan to measure the effectiveness of the game-like web applications in promoting better password practices?</td>
+            <td class="column5 style3 s">You could consider adding a feature that allows users to easily generate strong, unique passwords directly within the game-like web applications.</td>
+            <td class="column6 style3 s">I will measure the effectiveness by comparing the strength and uniqueness of passwords created by users before and after interacting with the game-like web applications.</td>
+            <td class="column7 style3 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row4">
+            <td class="column0 style3 s">Lilliana Vargas</td>
+            <td class="column1 style3 s">Develop engaging game-like password checking web app. Very interesting topic.</td>
+            <td class="column2 style3 s">good topic</td>
+            <td class="column3 style3 s">I would like to know what triple-modular strategy you will be using. </td>
+            <td class="column4 style3 s">What made you choose this topic?</td>
+            <td class="column5 style3 s">more info on frameworks and languages that you will be using.</td>
+            <td class="column6 style3 s">3 in 10 users have been victims of data breaches due to weak passwords. Weak passwords are short, easy to guess, or can be cracked in minutes using methods like credential stuffing.https://explodingtopics.com/blog/password-stats</td>
+            <td class="column7 style3 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row5">
+            <td class="column0 style3 s">Jadyn Reilly</td>
+            <td class="column1 style3 s">This project aims to see if a fun password-checking game application can promote better password habits.</td>
+            <td class="column2 style3 s">Clear articulation of your problem statement. This will be an engaging project!</td>
+            <td class="column3 style3 s">No improvement. I think this will be a fun project for you to work on.</td>
+            <td class="column4 style3 s">What implementations will you be using to deliver your research?</td>
+            <td class="column5 style3 s">No suggestions at this time. Great idea!</td>
+            <td class="column6 style3 s">Thanks for the positive feedback </td>
+            <td class="column7 style3 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row6">
+            <td class="column0 style3 s">Debs Olivares</td>
+            <td class="column1 style3 s">They're looking to see how to improve password habits, potentially by using a game web app. I think strat #1 or 2 will be applicable here</td>
+            <td class="column2 style3 s">Password security is important to talk about, many users hate coming up with complex passwords so it will be good to see how get them to improve their password creation habits</td>
+            <td class="column3 style4 s">I think it will be good to flesh out a bit more the triple modular strategy you are planning to use</td>
+            <td class="column4 style3 s">Are you creating a game web app or will you be researching the effectiveness of games for password creation?</td>
+            <td class="column5 style4 s">it will be helpful to provide some kind of rubrics or some way to properly rate the effectiveness of your proposal</td>
+            <td class="column6 style4 s">Yes, i am trying to make a fun type of gamified website where encourage users to have strong password and I will update my homepage about the triple modular strategy for clear concept.</td>
+            <td class="column7 style4 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row7">
+            <td class="column0 style3 s">Heather Reilly</td>
+            <td class="column1 style3 s">What is your triple modular strategy? Your presentation details your research extensively but I didn't see the strategy plan.</td>
+            <td class="column2 style3 s">Researching password security and testing an application of how to better improve password creation habits seems very unique and interesting. Hoping for good results.</td>
+            <td class="column3 style4 s">Will your sample size be big enough with the time constraints to get successful results? </td>
+            <td class="column4 style3 s">Have you tried other ways to improve password habits in users?</td>
+            <td class="column5 style4 s">No suggestions</td>
+            <td class="column6 style4 s">Only time will tell to finish my project. I haven't tried anything else but use simple generic password to avoid the hassle and that is why I wanted to make this website.</td>
+            <td class="column7 style4 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row8">
+            <td class="column0 style3 s">Quiendel Thompson</td>
+            <td class="column1 style3 s">Triple-modular Strategy include researching different methods of strong passwords and having users test out different passwords methods to identify which method is the strongest</td>
+            <td class="column2 style3 s">Identifying that people do indeed use weak passwords which can increase cybersecurity breaches.</td>
+            <td class="column3 style3 s">None for now, very good work.</td>
+            <td class="column4 style3 s">Where is the Triple-modular Strategy located</td>
+            <td class="column5 style3 s">Making your Triple-modular Strategy easy to access</td>
+            <td class="column6 style3 s">I will update my homepage to clarify the triple modular strategy according to my project.</td>
+            <td class="column7 style3 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row9">
+            <td class="column0 style3 s">Thomas Sullivan</td>
+            <td class="column1 style3 s">How can users be assisted in havign better security for passwords. HTML CSS and Javascript, Node.js, PHP</td>
+            <td class="column2 style3 s">This seems like it is a fairly engaging project, attempting to combine fun game design with checking for security is a neat concept, this should make it engaging for you to work on. </td>
+            <td class="column3 style3 s">I would be a bit more clear on what your triple modular strategy will be. </td>
+            <td class="column4 style3 s">Nothing at the moment.</td>
+            <td class="column5 style3 s">Just to be a bit more clear on modular strategies of implementation. </td>
+            <td class="column6 style4 s">I will update my homepage to clarify the triple modular strategy according to my project.</td>
+            <td class="column7 style3 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row10">
+            <td class="column0 style3 s">Pierre Gustave</td>
+            <td class="column1 style3 s">Subject: Data breach related to weak passwords. How developers can create apps to help users thinks about strong passwords.</td>
+            <td class="column2 style3 s">I am reminded by my Iphone every time I reused the same password. It is a great subject. Stolen online accounts can be a problem.</td>
+            <td class="column3 style4 s">Maybe add other ways that users can get to the habit of creating strong passwords.</td>
+            <td class="column4 style4 s">What are the three implementations that you are using?</td>
+            <td class="column5 style4 s">Maybe talk also about what constitute a strong password.</td>
+            <td class="column6 style4 s">I will update my homepage to clarify the triple modular strategy according to my project.</td>
+            <td class="column7 style4 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row11">
+            <td class="column0 style3 s">Mahalakshmi Somasundaram </td>
+            <td class="column1 style3 s">Interesting topic and your idea of creating game like web app to promote better password integration in web applications is great.</td>
+            <td class="column2 style5 s">Unique project idea</td>
+            <td class="column3 style5 s">None</td>
+            <td class="column4 style4 s">what made you pick this topic?</td>
+            <td class="column5 style4 s">None</td>
+            <td class="column6 style4 s">3 in 10 users have been victims of data breaches due to weak passwords. Weak passwords are short, easy to guess, or can be cracked in minutes using methods like credential stuffing.https://explodingtopics.com/blog/password-stats</td>
+            <td class="column7 style4 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row12">
+            <td class="column0 style3 s">Jay Estiva</td>
+            <td class="column1 style3 s">A very creative approach to the project. By offering an interactive game, users should be engaged throughout the whole process.</td>
+            <td class="column2 style3 s">Project is designed to be interactive and educational.</td>
+            <td class="column3 style5 s">n/a</td>
+            <td class="column4 style3 s">When did you notice there was a need for this?</td>
+            <td class="column5 style5 s">n/a</td>
+            <td class="column6 style4 s">when i did the research about the the biggest cyber-security incidents, those were all related to weak passwords. </td>
+            <td class="column7 style4 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row13">
+            <td class="column0 style3 s">Ian Cheung</td>
+            <td class="column1 style3 s">does not mention</td>
+            <td class="column2 style3 s">using gameplay to improve password habits</td>
+            <td class="column3 style4 s">specific kinds of games</td>
+            <td class="column4 style3 s">How will you implement a triple-modular strategy?</td>
+            <td class="column5 style4 s">specific kind of game</td>
+            <td class="column6 style4 s">I will update my homepage to clarify the triple modular strategy according to my project.</td>
+            <td class="column7 style4 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row14">
+            <td class="column0 style3 s">Joshua Dublin </td>
+            <td class="column1 style6 s">I don't see discussion of triple modular strategy.</td>
+            <td class="column2 style3 s">Password protection is a very important issue to society and is a great choice for your project.</td>
+            <td class="column3 style3 s">Add triple modular strategy.</td>
+            <td class="column4 style3 s">What made you inspired to study passwords?</td>
+            <td class="column5 style3 s">Great idea for a project, but get more specific in the slides. </td>
+            <td class="column6 style3 s">I will update my homepage to clarify the triple modular strategy according to my project.</td>
+            <td class="column7 style3 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row15">
+            <td class="column0 style3 s">Brianna Lopez </td>
+            <td class="column1 style3 s">Building an application for password checking</td>
+            <td class="column2 style3 s">Strong / clear idea</td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 s">How does this differ from password tools we have now? Who is this intended for?</td>
+            <td class="column5 style3 s">Create something simple enough for the time frame, if youre conducting research as well.</td>
+            <td class="column6 style8 s">It is meant for regular internet users who tend to have weak or reused passwords</td>
+            <td class="column7 style3 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row16">
+            <td class="column0 style3 s">Scott Hunt </td>
+            <td class="column1 style3 s">Investigates Poor password Policies and how they have an effect on security. No triple modular strategy</td>
+            <td class="column2 style3 s">Passwords do have an effect on security, but not all of it relies on password policies</td>
+            <td class="column3 style3 s">Passwords that once were only crackable through bruteforce are now not possible do to hashing. tie in how social engineering can play a role as well into acquiring this information.</td>
+            <td class="column4 style3 s">None</td>
+            <td class="column5 style7 s">See my comment about social engineering</td>
+            <td class="column6 style3 s">Hashing defends against brute-forcing passwords, but social engineering tricks users into revealing passwords, highlighting the need for better password education.</td>
+            <td class="column7 style3 null">3/22/2024</td>
+ 
+          </tr>
+          <tr class="row17">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row18">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row19">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row20">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row21">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row22">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row23">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row24">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row25">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row26">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row27">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row28">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row29">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row30">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row31">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+          <tr class="row32">
+            <td class="column0 style3 null"></td>
+            <td class="column1 style3 null"></td>
+            <td class="column2 style3 null"></td>
+            <td class="column3 style3 null"></td>
+            <td class="column4 style3 null"></td>
+            <td class="column5 style3 null"></td>
+            <td class="column6 style3 null"></td>
+            <td class="column7 style3 null"></td>
+ 
+          </tr>
+        </tbody>
+    </table>
+  </body>
+</html>
